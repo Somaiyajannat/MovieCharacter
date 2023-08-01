@@ -16,9 +16,20 @@ namespace MovieCharacter.Service{
             }
         };
 
-        public List<Character> getCharcater()
+        public List<CharacterDto> getCharacter()
         {
-            return characters;
+            List<CharacterDto> characterDtos = new List<CharacterDto>();
+            
+            foreach(var item in characters){
+                CharacterDto newItem = new CharacterDto();
+                newItem.Category = item.Category;
+                newItem.Name = item.Name;
+                newItem.Defense = item.Defense;
+
+                characterDtos.Add(newItem);
+            }
+
+            return characterDtos;
         }
 
         public Character getSingleCharacter()
@@ -31,7 +42,7 @@ namespace MovieCharacter.Service{
             return characters.FirstOrDefault(c => c.Id == id);
         }
 
-        public List<Character> addCharacter(Character newCharacter)
+        public List<CharacterDto> addCharacter(CharacterDto newCharacter)
         {
             characters.Add(newCharacter);
             return characters;

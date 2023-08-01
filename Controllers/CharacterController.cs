@@ -23,15 +23,15 @@ namespace MovieCharacter.Controllers
         [HttpGet]
         [Route("~/api/getAallCharacter")]
 
-        public ActionResult<List<Character>>  getCharcater(){
-            return Ok(_charcaterService.getCharcater());
+        public ActionResult<List<CharacterDto>>  getCharacter(){
+            return Ok(_charcaterService.getCharacter());
         }
         // get single
 
         [HttpGet]
         [Route("~/api/getSingleCharacter")]
 
-        public ActionResult<Character> getSingleCharacter() {
+        public ActionResult<CharacterDto> getSingleCharacter() {
             return Ok(_charcaterService.getSingleCharacter());
         }
 
@@ -40,14 +40,14 @@ namespace MovieCharacter.Controllers
         [HttpGet]
         [Route("~/api/getSingleCharacterById/{id}")]
 
-        public ActionResult<Character> getSingleCharacterById(int id){
+        public ActionResult<CharacterDto> getSingleCharacterById(int id){
             return Ok(_charcaterService.getSingleCharacterById(id));
         }
         // add a charcater 
         [HttpPost]
         [Route("~/api/addCharacter")]
 
-        public ActionResult<List<Character>> addCharacter(Character newCharacter) {
+        public ActionResult<List<CharacterDto>> addCharacter(CharacterDto newCharacter) {
             
             return Ok(_charcaterService.addCharacter(newCharacter));
         }

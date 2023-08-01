@@ -1,10 +1,12 @@
+global using MovieCharacter.Dto; 
+
 namespace MovieCharacter.Service{
 
     public interface ICharacterService{
-        List<Character> getCharcater();
-        Character getSingleCharacter();
-        Character getSingleCharacterById(int id);
-        List<Character> addCharacter(Character newCharacter);
+        List<CharacterDto> getCharcater();
+        CharacterDto getSingleCharacter();
+        CharacterDto getSingleCharacterById(int id);
+        List<CharacterDto> addCharacter(CharacterDto newCharacter);
 
     }
 }
