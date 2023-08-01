@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using MovieCharacter.Service;
 
 
 namespace MovieCharacter.Controllers
@@ -11,19 +12,19 @@ namespace MovieCharacter.Controllers
     [ApiController]
     [Route("api/[controller]")]
     public class CharacterController : ControllerBase{
-        private static readonly List<Character> characters = new List<Character>{
-            new Character(),
-            new Character{
-                Id = 1, Name = "Somaiya"
-            }
-        };
+        private static  ICharacterService _charcaterService; 
+
+        public CharacterController(ICharacterService characterservice){
+            _charcaterService = characterservice;
+        }
+       
 
 
         [HttpGet]
         [Route("~/api/getAallCharacter")]
 
         public ActionResult<List<Character>>  getCharcater(){
-            return Ok(characters);
+            return Ok(_charcaterService.getCharcater());
         }
         // get single
 
@@ -31,7 +32,7 @@ namespace MovieCharacter.Controllers
         [Route("~/api/getSingleCharacter")]
 
         public ActionResult<Character> getSingleCharacter() {
-            return Ok(characters[1]);
+            return Ok(_charcaterService.getSingleCharacter());
         }
 
         // get single charcater by id
@@ -40,21 +41,16 @@ namespace MovieCharacter.Controllers
         [Route("~/api/getSingleCharacterById/{id}")]
 
         public ActionResult<Character> getSingleCharacterById(int id){
-            return Ok(characters.FirstOrDefault(c => c.Id == id));
+            return Ok(_charcaterService.getSingleCharacterById(id));
         }
         // add a charcater 
         [HttpPost]
         [Route("~/api/addCharacter")]
 
         public ActionResult<List<Character>> addCharacter(Character newCharacter) {
-            characters.Add(newCharacter);
-            return Ok(characters);
-        }
-
-
-       
-       
             
+            return Ok(_charcaterService.addCharacter(newCharacter));
+        }
 
     }
 }
