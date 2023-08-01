@@ -25,6 +25,32 @@ namespace MovieCharacter.Controllers
         public ActionResult<List<Character>>  getCharcater(){
             return Ok(characters);
         }
+        // get single
+
+        [HttpGet]
+        [Route("~/api/getSingleCharacter")]
+
+        public ActionResult<Character> getSingleCharacter() {
+            return Ok(characters[1]);
+        }
+
+        // get single charcater by id
+
+        [HttpGet]
+        [Route("~/api/getSingleCharacterById/{id}")]
+
+        public ActionResult<Character> getSingleCharacterById(int id){
+            return Ok(characters.FirstOrDefault(c => c.Id == id));
+        }
+        // add a charcater 
+        [HttpPost]
+        [Route("~/api/addCharacter")]
+
+        public ActionResult<List<Character>> addCharacter(Character newCharacter) {
+            characters.Add(newCharacter);
+            return Ok(characters);
+        }
+
 
        
        
