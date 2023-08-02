@@ -29,25 +29,19 @@ namespace MovieCharacter.Controllers
         // get single
 
         [HttpGet]
-        [Route("~/api/getSingleCharacter")]
+        [Route("~/api/getSingleCharacter/{id}")]
 
-        public ActionResult<CharacterDto> getSingleCharacter() {
-            return Ok(_charcaterService.getSingleCharacter());
+        public ActionResult<CharacterDto> getSingleCharacter(int id){
+
+            return Ok(_charcaterService.getSingleCharacter(id));
         }
 
-        // get single charcater by id
-
-        [HttpGet]
-        [Route("~/api/getSingleCharacterById/{id}")]
-
-        public ActionResult<CharacterDto> getSingleCharacterById(int id){
-            return Ok(_charcaterService.getSingleCharacterById(id));
-        }
+     
         // add a charcater 
         [HttpPost]
         [Route("~/api/addCharacter")]
 
-        public ActionResult<List<CharacterDto>> addCharacter(CharacterDto newCharacter) {
+        public ActionResult<List<Character>> addCharacter(Character newCharacter) {
             
             return Ok(_charcaterService.addCharacter(newCharacter));
         }

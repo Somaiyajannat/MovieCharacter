@@ -31,25 +31,42 @@ namespace MovieCharacter.Service{
 
             return characterDtos;
         }
-
-        public Character getSingleCharacter()
+      
+        public CharacterDto getSingleCharacter(int id)
         {
-            return characters[0];
+            
+            var item = characters.Where(c =>c.Id == id).FirstOrDefault();
+            CharacterDto cdtos = new CharacterDto();
+           if(item != null){
+
+                cdtos.Name = item.Name;
+                cdtos.Id = item.Id;
+                cdtos.Category = item.Category;
+                cdtos.Intelligence = item.Intelligence;
+                cdtos.HitPoints = item.HitPoints;
+           }
+             
+            
+            return cdtos;
         }
-
-        public Character getSingleCharacterById(int id)
+  
+        public List<Character> addCharacter(Character newCharacter)
         {
-            return characters.FirstOrDefault(c => c.Id == id);
-        }
+            Character c = new Character();
+            c.Category = newCharacter.Category;
+            c.Id = newCharacter.Id;
+            c.Name = newCharacter.Name;
 
-        public List<CharacterDto> addCharacter(CharacterDto newCharacter)
-        {
-            characters.Add(newCharacter);
+
+            characters.Add(c);
             return characters;
         }
+
+       
+    }
+}        
 
    
 
 
-    }
-}
+    
