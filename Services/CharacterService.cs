@@ -53,6 +53,22 @@ namespace MovieCharacter.Service{
             serviceResponse.Data = characterList.Select(c => _mapper.Map<CharacterDto>(c)).ToList();
             return serviceResponse;
         }
+
+        // update a character
+
+        public async Task<ServiceResponse<CharacterDto>> UpdateCharacter(CharacterDto newCharacter){
+            var serviceResponse = new ServiceResponse<CharacterDto>();
+            var character = characterList.FirstOrDefault(c => c.Id == newCharacter.Id);
+            character.Id  = newCharacter.Id;
+            character.Name = newCharacter.Name;
+            character.Defense = newCharacter.Defense;
+            character.Strength = newCharacter.Strength;
+            character.HitPoints = newCharacter.HitPoints;
+
+            serviceResponse.Data = _mapper.Map<CharacterDto>(character);
+            return serviceResponse;
+
+        }
     }
 }        
 

@@ -766,11 +766,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\API_PROJECT\\MovieCharacter-Version-2\\MovieCharacter\\MovieCharacter.csproj",
+      "projectUniqueName": "C:\\PROJECTS\\Jannat\\MovieCharacter\\MovieCharacter.csproj",
       "projectName": "MovieCharacter",
-      "projectPath": "F:\\API_PROJECT\\MovieCharacter-Version-2\\MovieCharacter\\MovieCharacter.csproj",
+      "projectPath": "C:\\PROJECTS\\Jannat\\MovieCharacter\\MovieCharacter.csproj",
       "packagesPath": "C:\\Users\\Jannat\\.nuget\\packages\\",
-      "outputPath": "F:\\API_PROJECT\\MovieCharacter-Version-2\\MovieCharacter\\obj\\",
+      "outputPath": "C:\\PROJECTS\\Jannat\\MovieCharacter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jannat\\AppData\\Roaming\\NuGet\\NuGet.Config",

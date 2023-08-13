@@ -46,6 +46,14 @@ namespace MovieCharacter.Controllers
             
             return Ok(await _charcaterService.addCharacter(newCharacter));
         }
+        // update a character
+
+        [HttpPost]
+        [Route("~/api/updateCharacter")]
+
+        public async Task<ActionResult<CharacterDto>> updateCharacter(CharacterDto newCharacter) {
+            return Ok(await _charcaterService.UpdateCharacter(newCharacter));
+        }
 
     }
 }
