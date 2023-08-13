@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\API_PROJECT\\MovieCharacter\\MovieCharacter.csproj": {}
+    "F:\\API_PROJECT\\MovieCharacter-Version-2\\MovieCharacter\\MovieCharacter.csproj": {}
   },
   "projects": {
-    "F:\\API_PROJECT\\MovieCharacter\\MovieCharacter.csproj": {
+    "F:\\API_PROJECT\\MovieCharacter-Version-2\\MovieCharacter\\MovieCharacter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\API_PROJECT\\MovieCharacter\\MovieCharacter.csproj",
+        "projectUniqueName": "F:\\API_PROJECT\\MovieCharacter-Version-2\\MovieCharacter\\MovieCharacter.csproj",
         "projectName": "MovieCharacter",
-        "projectPath": "F:\\API_PROJECT\\MovieCharacter\\MovieCharacter.csproj",
+        "projectPath": "F:\\API_PROJECT\\MovieCharacter-Version-2\\MovieCharacter\\MovieCharacter.csproj",
         "packagesPath": "C:\\Users\\Jannat\\.nuget\\packages\\",
-        "outputPath": "F:\\API_PROJECT\\MovieCharacter\\obj\\",
+        "outputPath": "F:\\API_PROJECT\\MovieCharacter-Version-2\\MovieCharacter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jannat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.307\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,6 +41,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.5, )"
@@ -69,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.307\\RuntimeIdentifierGraph.json"
         }
       }
     }

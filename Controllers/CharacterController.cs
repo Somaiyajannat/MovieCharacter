@@ -5,35 +5,36 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MovieCharacter.Service;
-
+using MovieCharacter.Services;
 
 namespace MovieCharacter.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class CharacterController : ControllerBase{
-        private static  ICharacterService _charcaterService; 
 
+        private static  ICharacterService _charcaterService; 
+            
         public CharacterController(ICharacterService characterservice){
             _charcaterService = characterservice;
         }
        
 
-
+        // get all character
         [HttpGet]
         [Route("~/api/getAallCharacter")]
 
-        public ActionResult<List<CharacterDto>>  getCharacter(){
-            return Ok(_charcaterService.getCharacter());
+        public async  Task<ActionResult<ServiceResponse<List<CharacterDto>>>>  GetCharacter(){
+            return Ok(await _charcaterService.getCharacter());
         }
         // get single
 
         [HttpGet]
         [Route("~/api/getSingleCharacter/{id}")]
 
-        public ActionResult<CharacterDto> getSingleCharacter(int id){
+        public async Task<ActionResult<ServiceResponse<CharacterDto>>> GetSingleCharacter(int id){
 
-            return Ok(_charcaterService.getSingleCharacter(id));
+            return Ok(await _charcaterService.getSingleCharacter(id));
         }
 
      
@@ -41,9 +42,9 @@ namespace MovieCharacter.Controllers
         [HttpPost]
         [Route("~/api/addCharacter")]
 
-        public ActionResult<List<Character>> addCharacter(Character newCharacter) {
+        public async Task<ActionResult<ServiceResponse<List<Character>>>> AddCharacter(CharacterDto newCharacter) {
             
-            return Ok(_charcaterService.addCharacter(newCharacter));
+            return Ok(await _charcaterService.addCharacter(newCharacter));
         }
 
     }
