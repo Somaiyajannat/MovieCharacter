@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Razor.TagHelpers;
+using MovieCharacter.Data;
 using MovieCharacter.Services;
 
 namespace MovieCharacter.Service{
@@ -16,13 +18,15 @@ namespace MovieCharacter.Service{
                 Id = 1, Name = "Somaiya Jannat"
             },
             new Character{
-                Id = 2, Name = "Somaiya"
+                Id = 2, Name = "Somaiya_2"
             }
         };
 
         private readonly IMapper _mapper;
-        public CharacterService(IMapper mapper){
+        private readonly DataContext _context;
+        public CharacterService(IMapper mapper, DataContext context){
             _mapper = mapper;
+            _context = context;
         }
 
 
@@ -30,8 +34,9 @@ namespace MovieCharacter.Service{
         public async Task<ServiceResponse<CharacterDto>> getSingleCharacter(int id)
         {
             var serviceResponse = new ServiceResponse<CharacterDto>();
-            var data = characterList.Where(x => x.Id == id).FirstOrDefault();
-            serviceResponse.Data = _mapper.Map<CharacterDto>(data);
+            //var data = characterList.Where(x => x.Id == id).FirstOrDefault();
+            var dbCharacter = await _context.Characters.FirstOrDefaultAsync(c => c.Id == id);
+            serviceResponse.Data = _mapper.Map<CharacterDto>(dbCharacter);
             return serviceResponse;
 
         }
@@ -39,7 +44,8 @@ namespace MovieCharacter.Service{
         // get all character
         public async Task<ServiceResponse<List<CharacterDto>>> getCharacter(){
             var serviceResponse = new ServiceResponse<List<CharacterDto>> ();
-            var data = characterList.Select(c => _mapper.Map<CharacterDto>(c)).ToList();
+            var dbCharacters = await _context.Characters.ToListAsync();
+            var data = dbCharacters.Select(c => _mapper.Map<CharacterDto>(c)).ToList();
             serviceResponse.Data = data;
             return serviceResponse;
 
@@ -50,9 +56,12 @@ namespace MovieCharacter.Service{
         public async Task<ServiceResponse<List<CharacterDto>>> addCharacter(CharacterDto NewCharacter){
             var serviceResponse = new ServiceResponse<List<CharacterDto>>();
             var character = _mapper.Map<Character>(NewCharacter);
-            character.Id = characterList.Max(c => c.Id) + 1;
-            characterList.Add(_mapper.Map<Character>(NewCharacter));
-            serviceResponse.Data = characterList.Select(c => _mapper.Map<CharacterDto>(c)).ToList();
+            _context.Characters.Add(character);
+            await _context.SaveChangesAsync();
+
+            // character.Id = characterList.Max(c => c.Id) + 1;
+            //characterList.Add(_mapper.Map<Character>(NewCharacter));
+            serviceResponse.Data = await  _context.Characters.Select(c => _mapper.Map<CharacterDto>(c)).ToListAsync();
             return serviceResponse;
         }
 

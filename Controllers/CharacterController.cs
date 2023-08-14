@@ -11,7 +11,7 @@ namespace MovieCharacter.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CharacterController : ControllerBase{
+    public class CharacterController : ControllerBase {
 
         private static  ICharacterService _charcaterService; 
             
