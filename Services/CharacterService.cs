@@ -58,17 +58,53 @@ namespace MovieCharacter.Service{
 
         public async Task<ServiceResponse<CharacterDto>> UpdateCharacter(CharacterDto newCharacter){
             var serviceResponse = new ServiceResponse<CharacterDto>();
-            var character = characterList.FirstOrDefault(c => c.Id == newCharacter.Id);
-            character.Id  = newCharacter.Id;
-            character.Name = newCharacter.Name;
-            character.Defense = newCharacter.Defense;
-            character.Strength = newCharacter.Strength;
-            character.HitPoints = newCharacter.HitPoints;
 
-            serviceResponse.Data = _mapper.Map<CharacterDto>(character);
+            try{    
+                
+                var character = characterList.FirstOrDefault(c => c.Id == newCharacter.Id);
+                if(character is null){
+                    throw new Exception($"Character with Id {newCharacter.Id} not found");
+                }
+                character.Id  = newCharacter.Id;
+                character.Name = newCharacter.Name;
+                character.Defense = newCharacter.Defense;
+                character.Strength = newCharacter.Strength;
+                character.HitPoints = newCharacter.HitPoints;
+                serviceResponse.Data = _mapper.Map<CharacterDto>(character);
+
+            }
+            catch(Exception ex){
+                serviceResponse.Status = false;
+                serviceResponse.Message = ex.Message;
+
+            }
+            
             return serviceResponse;
 
         }
+
+        // delete character
+
+        public async Task<ServiceResponse<CharacterDto>> DeleteCharacter(int id){
+
+            var serviceResponse = new ServiceResponse<CharacterDto>();
+            try{
+                var info = characterList.Where(c => c.Id == id).FirstOrDefault();
+                if (info is null) throw new Exception($"Character Id {id} is not found");
+
+                characterList.Remove(info);
+
+               // serviceResponse.Data = characterList.Select(c => _mapper.Map<CharacterDto>(c)).ToList();
+                
+            } catch (Exception ex){
+                    serviceResponse.Status = false;
+                    serviceResponse.Message = ex.Message;
+            }
+            return serviceResponse;
+                       
+
+        }
+
     }
 }        
 

@@ -48,11 +48,19 @@ namespace MovieCharacter.Controllers
         }
         // update a character
 
-        [HttpPost]
+        [HttpPut]
         [Route("~/api/updateCharacter")]
 
         public async Task<ActionResult<CharacterDto>> updateCharacter(CharacterDto newCharacter) {
             return Ok(await _charcaterService.UpdateCharacter(newCharacter));
+        }
+        // delete a character
+
+        [HttpDelete]
+        [Route("~/api/deleteCharacter")]
+
+        public async Task<ActionResult<CharacterDto>> DeleteCharacter(int id){
+            return Ok(await _charcaterService.DeleteCharacter(id));
         }
 
     }
