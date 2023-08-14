@@ -60,7 +60,11 @@ namespace MovieCharacter.Controllers
         [Route("~/api/deleteCharacter")]
 
         public async Task<ActionResult<CharacterDto>> DeleteCharacter(int id){
-            return Ok(await _charcaterService.DeleteCharacter(id));
+            var response = await _charcaterService.DeleteCharacter(id);
+            if(response.Data is null){
+                return NotFound(response);
+            }
+            return Ok(response);
         }
 
     }

@@ -12,9 +12,11 @@ namespace MovieCharacter.Service{
     public class CharacterService : ICharacterService{
 
         private static  List<Character> characterList = new List<Character>{
-            new Character(),
             new Character{
-                Id = 1, Name = "Somaiya"
+                Id = 1, Name = "Somaiya Jannat"
+            },
+            new Character{
+                Id = 2, Name = "Somaiya"
             }
         };
 
