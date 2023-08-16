@@ -9,7 +9,7 @@ namespace MovieCharacter.Service{
         Task <ServiceResponse<CharacterDto>> UpdateCharacter(CharacterDto newCharacter);
         Task<ServiceResponse<List<CharacterDto>>> addCharacter(CharacterDto newCharacter);
 
-        Task<ServiceResponse<CharacterDto>> DeleteCharacter(int id);
+        Task<ServiceResponse<List<CharacterDto>>> DeleteCharacter(int id);
 
     }
 }

@@ -13,14 +13,8 @@ namespace MovieCharacter.Service{
     
     public class CharacterService : ICharacterService{
 
-        private static  List<Character> characterList = new List<Character>{
-            new Character{
-                Id = 1, Name = "Somaiya Jannat"
-            },
-            new Character{
-                Id = 2, Name = "Somaiya_2"
-            }
-        };
+        private static  List<Character> characterList = new List<Character>();
+    
 
         private readonly IMapper _mapper;
         private readonly DataContext _context;
@@ -97,16 +91,15 @@ namespace MovieCharacter.Service{
 
         // delete character
 
-        public async Task<ServiceResponse<CharacterDto>> DeleteCharacter(int id){
+        public async Task<ServiceResponse<List<CharacterDto>>> DeleteCharacter(int id){
 
-            var serviceResponse = new ServiceResponse<CharacterDto>();
+            var serviceResponse = new ServiceResponse<List<CharacterDto>>();
             try{
-                var info = characterList.Where(c => c.Id == id).FirstOrDefault();
+                var info = await _context.Characters.Where(c => c.Id == id).FirstOrDefaultAsync();
                 if (info is null) throw new Exception($"Character Id {id} is not found");
-
-                characterList.Remove(info);
-
-               // serviceResponse.Data = characterList.Select(c => _mapper.Map<CharacterDto>(c)).ToList();
+                _context.Characters.Remove(info);
+                await _context.SaveChangesAsync();
+                serviceResponse.Data = await  _context.Characters.Select(c => _mapper.Map<CharacterDto>(c)).ToListAsync();
                 
             } catch (Exception ex){
                     serviceResponse.Status = false;

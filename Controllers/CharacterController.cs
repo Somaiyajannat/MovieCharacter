@@ -51,7 +51,7 @@ namespace MovieCharacter.Controllers
         [HttpPut]
         [Route("~/api/updateCharacter")]
 
-        public async Task<ActionResult<CharacterDto>> updateCharacter(CharacterDto newCharacter) {
+        public async Task<ActionResult<ServiceResponse<CharacterDto>>> updateCharacter(CharacterDto newCharacter) {
             return Ok(await _charcaterService.UpdateCharacter(newCharacter));
         }
         // delete a character
@@ -59,7 +59,7 @@ namespace MovieCharacter.Controllers
         [HttpDelete]
         [Route("~/api/deleteCharacter")]
 
-        public async Task<ActionResult<CharacterDto>> DeleteCharacter(int id){
+        public async Task<ActionResult<ServiceResponse<List<CharacterDto>>>> DeleteCharacter(int id){
             var response = await _charcaterService.DeleteCharacter(id);
             if(response.Data is null){
                 return NotFound(response);
