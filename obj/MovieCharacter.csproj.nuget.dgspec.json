@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PROJECTS\\Jannat\\MovieCharacter\\MovieCharacter.csproj": {}
+    "C:\\PROJECTS\\Jannat_Personal\\MovieCharacter\\MovieCharacter.csproj": {}
   },
   "projects": {
-    "C:\\PROJECTS\\Jannat\\MovieCharacter\\MovieCharacter.csproj": {
+    "C:\\PROJECTS\\Jannat_Personal\\MovieCharacter\\MovieCharacter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PROJECTS\\Jannat\\MovieCharacter\\MovieCharacter.csproj",
+        "projectUniqueName": "C:\\PROJECTS\\Jannat_Personal\\MovieCharacter\\MovieCharacter.csproj",
         "projectName": "MovieCharacter",
-        "projectPath": "C:\\PROJECTS\\Jannat\\MovieCharacter\\MovieCharacter.csproj",
+        "projectPath": "C:\\PROJECTS\\Jannat_Personal\\MovieCharacter\\MovieCharacter.csproj",
         "packagesPath": "C:\\Users\\Jannat\\.nuget\\packages\\",
-        "outputPath": "C:\\PROJECTS\\Jannat\\MovieCharacter\\obj\\",
+        "outputPath": "C:\\PROJECTS\\Jannat_Personal\\MovieCharacter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jannat\\AppData\\Roaming\\NuGet\\NuGet.Config",

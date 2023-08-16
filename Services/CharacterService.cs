@@ -72,7 +72,7 @@ namespace MovieCharacter.Service{
 
             try{    
                 
-                var character = characterList.FirstOrDefault(c => c.Id == newCharacter.Id);
+                var character = await _context.Characters.FirstOrDefaultAsync(c => c.Id == newCharacter.Id);
                 if(character is null){
                     throw new Exception($"Character with Id {newCharacter.Id} not found");
                 }
@@ -81,6 +81,7 @@ namespace MovieCharacter.Service{
                 character.Defense = newCharacter.Defense;
                 character.Strength = newCharacter.Strength;
                 character.HitPoints = newCharacter.HitPoints;
+                await _context.SaveChangesAsync();
                 serviceResponse.Data = _mapper.Map<CharacterDto>(character);
 
             }

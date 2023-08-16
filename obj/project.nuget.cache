@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kImidkiEvHZqmgeX6UgAo4+VhTByP3yTsQL5ppLQt/xDicOjEoSxF5iVLwGYf61boIdctvwWs2Yi5OyK+Vkr7g==",
+  "dgSpecHash": "e7aNy4tGLRBVQfh5FQYznvMsRguEna9MmgtAR+99HSU0LHQ8vmBt9cW//7DGl7FW4lbh0kQrLKAa1V1LAFZ9QQ==",
   "success": true,
-  "projectFilePath": "C:\\PROJECTS\\Jannat\\MovieCharacter\\MovieCharacter.csproj",
+  "projectFilePath": "C:\\PROJECTS\\Jannat_Personal\\MovieCharacter\\MovieCharacter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jannat\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Jannat\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
