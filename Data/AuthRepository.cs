@@ -16,16 +16,30 @@ public class AuthRepository : IAuthRepository
 
     public async Task<ServiceResponse<int>> Register(User user, string password)
     {
+        var response = new ServiceResponse<int>();
+        if(await UserExists(user.Username))
+        {
+            response.Status = false;
+            response.Message = "User Already exists";
+            return response;
+        }
+        CreatePasswordHash( password,out byte[]passwordHash, out byte[] passwordSalt);
+        user.PasswordHash = passwordHash;
+        user.PasswordSalt = passwordSalt;
+
+
         _datacontext.Users.Add(user);
         await _datacontext.SaveChangesAsync();
-        var response = new ServiceResponse<int>();
+        //var response = new ServiceResponse<int>();
         response.Data = user.Id;
         return response;
     }
 
-    public Task<bool> UserExists(string username)
+    public async Task<bool> UserExists(string username)
     {
-        throw new NotImplementedException();
+        if(await _datacontext.Users.AnyAsync(u => u.Username.ToLower() == username.ToLower())){
+            return true;
+        } else return false;
     }
 // using an algothim for cryptography 
     private void CreatePasswordHash(string password,out byte[]passwordHash, out byte[] passwordSalt){

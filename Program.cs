@@ -4,6 +4,7 @@ using MovieCharacter.Data;
 using MovieCharacter.Service;
 using Microsoft.SqlServer;
 using Microsoft.EntityFrameworkCore;
+using MovieCharacter;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,7 @@ builder.Services.AddSwaggerGen();
 
 //Services Registered
 builder.Services.AddScoped<ICharacterService, CharacterService>();
+builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 // db context registered
 builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
