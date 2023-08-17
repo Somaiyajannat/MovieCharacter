@@ -11,7 +11,7 @@ namespace MovieCharacter.Models{
         public int Defense { get; set; } = 100;
         public int Intelligence { get; set; } = 100;
         public RpgClass Category { get; set; } = new RpgClass();
-        public User? user{get;set;}
+        public User? User{get;set;}
     }
 
 }
