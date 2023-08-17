@@ -7,8 +7,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using MovieCharacter.Data;
 using MovieCharacter.Services;
-
-namespace MovieCharacter.Service{
+namespace MovieCharacter.Service;
 
     
     public class CharacterService : ICharacterService{
@@ -118,7 +117,7 @@ namespace MovieCharacter.Service{
         }
 
     }
-}        
+       
 
    
 

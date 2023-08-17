@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MovieCharacter.Service;
 using MovieCharacter.Services;
+namespace MovieCharacter.Controllers;
 
-namespace MovieCharacter.Controllers
-{
     [ApiController]
     [Route("api/[controller]")]
     public class CharacterController : ControllerBase {
@@ -68,4 +67,3 @@ namespace MovieCharacter.Controllers
         }
 
     }
-}

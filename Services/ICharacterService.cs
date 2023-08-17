@@ -1,7 +1,7 @@
 global using MovieCharacter.Dto; 
 using MovieCharacter.Services;
 
-namespace MovieCharacter.Service{
+namespace MovieCharacter.Service;
 
     public interface ICharacterService{
         Task<ServiceResponse<List<CharacterDto>>> getCharacter();
@@ -12,4 +12,3 @@ namespace MovieCharacter.Service{
         Task<ServiceResponse<CharacterDto>> DeleteCharacter(int id);
 
     }
-}
