@@ -9,9 +9,21 @@ public class AuthRepository : IAuthRepository
     {
         _datacontext = dataContext;
     }
-    public Task<ServiceResponse<string>> Login(string username, string password)
+    public async Task<ServiceResponse<string>> Login(string username, string password)
     {
-        throw new NotImplementedException();
+        var response = new ServiceResponse<string>();
+        var user = await _datacontext.Users.FirstOrDefaultAsync(u => u.Username.ToLower() .Equals(username.ToLower()));
+        if(user is null){
+            response.Status = false;
+            response.Message = "User not Found!";
+
+        } else if (!VerifyPasswordHash(password,user.PasswordHash, user.PasswordSalt)){
+            response.Status = false;
+            response.Message = "Wrong password";
+        } else {
+            response.Data = user.Id.ToString();
+        }
+        return response;
     }
 
     public async Task<ServiceResponse<int>> Register(User user, string password)
@@ -36,7 +48,7 @@ public class AuthRepository : IAuthRepository
         response.Data = user.Id;
         return response;
     }
-
+    // check user exist or not
     public async Task<bool> UserExists(string username)
     {
         if(await _datacontext.Users.AnyAsync(u => u.Username.ToLower() == username.ToLower())){
@@ -51,4 +63,14 @@ public class AuthRepository : IAuthRepository
             passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
         }
     }
+    // check password correct or not
+
+    private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt) {
+        using(var hmac = new System.Security.Cryptography.HMACSHA512(passwordSalt)){
+            var ComputeHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+            return ComputeHash.SequenceEqual(passwordHash);
+        }
+    }
+
+
 }

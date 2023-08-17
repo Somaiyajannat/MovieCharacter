@@ -16,6 +16,7 @@ public class AuthController: ControllerBase{
     {
         _authrepository = authRepository;
     }
+    // registration
     [HttpPost]
     [Route("~/api/user/registration")]
     public async Task<ActionResult<ServiceResponse<int>>> Register(UserRegisterDto request){
@@ -30,5 +31,18 @@ public class AuthController: ControllerBase{
 
         
     }
+    // login
+    [HttpPost]
+    [Route("~/api/user/login")]
+    public async Task<ActionResult<ServiceResponse<int>>> Login(UserLoginDto request){
+        var response = await _authrepository.Login(request.Username, request.Password);
+        if(!response.Status){
+            return BadRequest(response);
+        }
+        return Ok(response);
+
+        
+    }
+
 
 }
