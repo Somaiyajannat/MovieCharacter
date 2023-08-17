@@ -27,10 +27,12 @@ public class AuthRepository : IAuthRepository
         user.PasswordHash = passwordHash;
         user.PasswordSalt = passwordSalt;
 
-
+        // add new user to Users-> then save it to the database
         _datacontext.Users.Add(user);
         await _datacontext.SaveChangesAsync();
-        //var response = new ServiceResponse<int>();
+        // send id to the generic class serviceresponse 
+        // if send password it word save as a plain text which is not good
+        // we use an algorithm for create password
         response.Data = user.Id;
         return response;
     }
@@ -39,7 +41,8 @@ public class AuthRepository : IAuthRepository
     {
         if(await _datacontext.Users.AnyAsync(u => u.Username.ToLower() == username.ToLower())){
             return true;
-        } else return false;
+        }
+        return false;
     }
 // using an algothim for cryptography 
     private void CreatePasswordHash(string password,out byte[]passwordHash, out byte[] passwordSalt){
