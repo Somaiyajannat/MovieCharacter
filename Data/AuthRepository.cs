@@ -1,13 +1,18 @@
+using Microsoft.IdentityModel.Tokens;
 using MovieCharacter.Data;
 using MovieCharacter.Services;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace MovieCharacter;
 public class AuthRepository : IAuthRepository
 {
     private readonly DataContext _datacontext;
-    public AuthRepository(DataContext dataContext)
+    private readonly IConfiguration _configuration;
+    public AuthRepository(DataContext dataContext, IConfiguration configuration)
     {
         _datacontext = dataContext;
+        _configuration = configuration;
     }
     public async Task<ServiceResponse<string>> Login(string username, string password)
     {
@@ -21,9 +26,11 @@ public class AuthRepository : IAuthRepository
             response.Status = false;
             response.Message = "Wrong password";
         } else {
-            response.Data = user.Id.ToString();
+            response.Data = CreateToken(user);
+            //response.Data = user.Id.ToString();
         }
         return response;
+       
     }
 
     public async Task<ServiceResponse<int>> Register(User user, string password)
@@ -70,6 +77,31 @@ public class AuthRepository : IAuthRepository
             var ComputeHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
             return ComputeHash.SequenceEqual(passwordHash);
         }
+    }
+    // create token and return string
+    private string CreateToken(User user){
+        var claims = new List<Claim>{
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new Claim(ClaimTypes.Name, user.Username)
+        };
+        var appSettingsToken = _configuration.GetSection("AppSettings:Token").Value;
+        if(appSettingsToken is null)
+        throw new Exception("App Settings token is null");
+
+        SymmetricSecurityKey key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(appSettingsToken));
+        SigningCredentials creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256Signature);
+
+         var tokenDescriptor = new SecurityTokenDescriptor{
+            Subject = new ClaimsIdentity(claims),
+            Expires = DateTime.Now.AddDays(1),
+            SigningCredentials = creds
+         };
+         JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+         SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
+
+         return tokenHandler.WriteToken(token);
+
+        //return string.Empty;
     }
 
 

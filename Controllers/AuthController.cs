@@ -16,6 +16,8 @@ public class AuthController: ControllerBase{
     {
         _authrepository = authRepository;
     }
+
+    
     // registration
     [HttpPost]
     [Route("~/api/user/registration")]
