@@ -33,6 +33,7 @@ public class AuthRepository : IAuthRepository
        
     }
 
+    // User Registration
     public async Task<ServiceResponse<int>> Register(User user, string password)
     {
         var response = new ServiceResponse<int>();
@@ -66,6 +67,7 @@ public class AuthRepository : IAuthRepository
             passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
         }
     }
+
     // check password correct or not
 
     private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt) {
@@ -74,6 +76,7 @@ public class AuthRepository : IAuthRepository
             return ComputeHash.SequenceEqual(passwordHash);
         }
     }
+
     // create token and return string
     private string CreateToken(User user){
         var claims = new List<Claim>{

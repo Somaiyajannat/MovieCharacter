@@ -26,10 +26,10 @@ public class AuthController: ControllerBase{
             new User{Username = request.Username},
             request.Password
         );
-        if(!response.Success)
-        {
-            return BadRequest(response);
-        }
+        //if(!response.Success)
+        //{
+        //    return BadRequest(response);
+        //}
         return Ok(response);
 
         
