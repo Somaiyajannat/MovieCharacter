@@ -85,7 +85,7 @@ namespace MovieCharacter.Service;
 
             }
             catch(Exception ex){
-                serviceResponse.Status = false;
+                serviceResponse.Success = false;
                 serviceResponse.Message = ex.Message;
 
             }
@@ -108,7 +108,7 @@ namespace MovieCharacter.Service;
                // serviceResponse.Data = characterList.Select(c => _mapper.Map<CharacterDto>(c)).ToList();
                 
             } catch (Exception ex){
-                    serviceResponse.Status = false;
+                    serviceResponse.Success = false;
                     serviceResponse.Message = ex.Message;
             }
             return serviceResponse;

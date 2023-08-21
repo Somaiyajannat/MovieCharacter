@@ -26,7 +26,8 @@ public class AuthController: ControllerBase{
             new User{Username = request.Username},
             request.Password
         );
-        if(!response.Status){
+        if(!response.Success)
+        {
             return BadRequest(response);
         }
         return Ok(response);
@@ -38,7 +39,8 @@ public class AuthController: ControllerBase{
     [Route("~/api/user/login")]
     public async Task<ActionResult<ServiceResponse<int>>> Login(UserLoginDto request){
         var response = await _authrepository.Login(request.Username, request.Password);
-        if(!response.Status){
+        if(!response.Success)
+        {
             return BadRequest(response);
         }
         return Ok(response);

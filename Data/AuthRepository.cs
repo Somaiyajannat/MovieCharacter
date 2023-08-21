@@ -19,11 +19,11 @@ public class AuthRepository : IAuthRepository
         var response = new ServiceResponse<string>();
         var user = await _datacontext.Users.FirstOrDefaultAsync(u => u.Username.ToLower() .Equals(username.ToLower()));
         if(user is null){
-            response.Status = false;
+            response.Success = false;
             response.Message = "User not Found!";
 
         } else if (!VerifyPasswordHash(password,user.PasswordHash, user.PasswordSalt)){
-            response.Status = false;
+            response.Success = false;
             response.Message = "Wrong password";
         } else {
             response.Data = CreateToken(user);
@@ -38,20 +38,16 @@ public class AuthRepository : IAuthRepository
         var response = new ServiceResponse<int>();
         if(await UserExists(user.Username))
         {
-            response.Status = false;
-            response.Message = "User Already exists";
+            response.Success = false;
+            response.Message = "User Already Exists";
             return response;
         }
         CreatePasswordHash( password,out byte[]passwordHash, out byte[] passwordSalt);
         user.PasswordHash = passwordHash;
         user.PasswordSalt = passwordSalt;
 
-        // add new user to Users-> then save it to the database
         _datacontext.Users.Add(user);
         await _datacontext.SaveChangesAsync();
-        // send id to the generic class serviceresponse 
-        // if send password it word save as a plain text which is not good
-        // we use an algorithm for create password
         response.Data = user.Id;
         return response;
     }
