@@ -14,16 +14,19 @@ public class AuthRepository : IAuthRepository
         _datacontext = dataContext;
         _configuration = configuration;
     }
+
+    // login 
     public async Task<ServiceResponse<string>> Login(string username, string password)
     {
         var response = new ServiceResponse<string>();
-        var user = await _datacontext.Users.FirstOrDefaultAsync(u => u.Username.ToLower() .Equals(username.ToLower()));
+        var user = await _datacontext.Users.FirstOrDefaultAsync(u => u.Username.ToLower().Equals(username.ToLower()));
+        
         if(user is null){
-            response.Success = false;
+            response.Status = false;
             response.Message = "User not Found!";
 
         } else if (!VerifyPasswordHash(password,user.PasswordHash, user.PasswordSalt)){
-            response.Success = false;
+            response.Status = false;
             response.Message = "Wrong password";
         } else {
             response.Data = CreateToken(user);
@@ -33,20 +36,20 @@ public class AuthRepository : IAuthRepository
        
     }
 
-    // User Registration
     public async Task<ServiceResponse<int>> Register(User user, string password)
     {
         var response = new ServiceResponse<int>();
         if(await UserExists(user.Username))
         {
-            response.Success = false;
-            response.Message = "User Already Exists";
+            response.Status = false;
+            response.Message = "User Already exists";
             return response;
         }
         CreatePasswordHash( password,out byte[]passwordHash, out byte[] passwordSalt);
         user.PasswordHash = passwordHash;
         user.PasswordSalt = passwordSalt;
 
+        // add new user to Users-> then save it to the database
         _datacontext.Users.Add(user);
         await _datacontext.SaveChangesAsync();
         response.Data = user.Id;
@@ -67,7 +70,6 @@ public class AuthRepository : IAuthRepository
             passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
         }
     }
-
     // check password correct or not
 
     private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt) {
@@ -76,7 +78,6 @@ public class AuthRepository : IAuthRepository
             return ComputeHash.SequenceEqual(passwordHash);
         }
     }
-
     // create token and return string
     private string CreateToken(User user){
         var claims = new List<Claim>{

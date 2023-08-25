@@ -3,11 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MovieCharacter.Service;
 using MovieCharacter.Services;
 namespace MovieCharacter.Controllers;
 
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class CharacterController : ControllerBase {
@@ -51,14 +53,19 @@ namespace MovieCharacter.Controllers;
         [Route("~/api/updateCharacter")]
 
         public async Task<ActionResult<CharacterDto>> updateCharacter(CharacterDto newCharacter) {
-            return Ok(await _charcaterService.UpdateCharacter(newCharacter));
+            var response = await _charcaterService.UpdateCharacter(newCharacter);
+             if (response.Data is null)
+            {
+                return NotFound(response);
+            }
+             return Ok(response);
         }
         // delete a character
 
         [HttpDelete]
         [Route("~/api/deleteCharacter")]
 
-        public async Task<ActionResult<CharacterDto>> DeleteCharacter(int id){
+        public async Task<ActionResult<List<CharacterDto>>> DeleteCharacter(int id){
             var response = await _charcaterService.DeleteCharacter(id);
             if(response.Data is null){
                 return NotFound(response);

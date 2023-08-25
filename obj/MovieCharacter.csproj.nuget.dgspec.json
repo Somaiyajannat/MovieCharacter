@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jannat\\OneDrive - Labaid Pharmaceutical Ltd\\Desktop\\MovieCharacter\\MovieCharacter.csproj": {}
+    "E:\\MovieCharacter\\MovieCharacter\\MovieCharacter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jannat\\OneDrive - Labaid Pharmaceutical Ltd\\Desktop\\MovieCharacter\\MovieCharacter.csproj": {
+    "E:\\MovieCharacter\\MovieCharacter\\MovieCharacter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jannat\\OneDrive - Labaid Pharmaceutical Ltd\\Desktop\\MovieCharacter\\MovieCharacter.csproj",
+        "projectUniqueName": "E:\\MovieCharacter\\MovieCharacter\\MovieCharacter.csproj",
         "projectName": "MovieCharacter",
-        "projectPath": "C:\\Users\\Jannat\\OneDrive - Labaid Pharmaceutical Ltd\\Desktop\\MovieCharacter\\MovieCharacter.csproj",
-        "packagesPath": "C:\\Users\\Jannat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jannat\\OneDrive - Labaid Pharmaceutical Ltd\\Desktop\\MovieCharacter\\obj\\",
+        "projectPath": "E:\\MovieCharacter\\MovieCharacter\\MovieCharacter.csproj",
+        "packagesPath": "C:\\Users\\somai\\.nuget\\packages\\",
+        "outputPath": "E:\\MovieCharacter\\MovieCharacter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jannat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\somai\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.307\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,6 +43,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
@@ -72,6 +75,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "Swashbuckle.AspNetCore.Filters": {
+              "target": "Package",
+              "version": "[7.0.8, )"
             }
           },
           "imports": [
@@ -93,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.307\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

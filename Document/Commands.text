@@ -1,6 +1,0 @@
-Craete Project              : dotnet new webapi
-Open Project                : code .
-Build Project               : dotnet Build
-Run project                 : dotnet watch run
-Add project to solution     : dotnet sln add MovieCharacter.csproj
-

@@ -222,81 +222,89 @@ C:\PROJECTS\Jannat_Personal\MovieCharacter\obj\Debug\net7.0\refint\MovieCharacte
 C:\PROJECTS\Jannat_Personal\MovieCharacter\obj\Debug\net7.0\MovieCharacter.pdb
 C:\PROJECTS\Jannat_Personal\MovieCharacter\obj\Debug\net7.0\MovieCharacter.genruntimeconfig.cache
 C:\PROJECTS\Jannat_Personal\MovieCharacter\obj\Debug\net7.0\ref\MovieCharacter.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\appsettings.Development.json
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\appsettings.json
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\MovieCharacter.exe
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\MovieCharacter.deps.json
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\MovieCharacter.runtimeconfig.json
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\MovieCharacter.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\MovieCharacter.pdb
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\AutoMapper.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Azure.Core.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Azure.Identity.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Humanizer.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.Identity.Client.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.OpenApi.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Mono.TextTemplating.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\System.CodeDom.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\System.Drawing.Common.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\System.Memory.Data.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\System.Runtime.Caching.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\System.Security.Permissions.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\System.Windows.Extensions.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\MovieCharacter.csproj.AssemblyReference.cache
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\MovieCharacter.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\MovieCharacter.AssemblyInfoInputs.cache
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\MovieCharacter.AssemblyInfo.cs
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\MovieCharacter.csproj.CoreCompileInputs.cache
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\MovieCharacter.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\MovieCharacter.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\staticwebassets\msbuild.MovieCharacter.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\staticwebassets\msbuild.build.MovieCharacter.props
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MovieCharacter.props
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MovieCharacter.props
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\staticwebassets.pack.json
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\staticwebassets.build.json
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\staticwebassets.development.json
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\scopedcss\bundle\MovieCharacter.styles.css
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\MovieCharacter.csproj.CopyComplete
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\MovieCharacter.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\refint\MovieCharacter.dll
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\MovieCharacter.pdb
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\MovieCharacter.genruntimeconfig.cache
-C:\Users\Jannat\OneDrive - Labaid Pharmaceutical Ltd\Desktop\MovieCharacter\obj\Debug\net7.0\ref\MovieCharacter.dll
+C:\PROJECTS\Jannat_Personal\MovieCharacter\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\PROJECTS\Jannat_Personal\MovieCharacter\bin\Debug\net7.0\Scrutor.dll
+C:\PROJECTS\Jannat_Personal\MovieCharacter\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.dll
+C:\PROJECTS\Jannat_Personal\MovieCharacter\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\appsettings.Development.json
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\appsettings.json
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\MovieCharacter.exe
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\MovieCharacter.deps.json
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\MovieCharacter.runtimeconfig.json
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\MovieCharacter.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\MovieCharacter.pdb
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\AutoMapper.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Azure.Core.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Azure.Identity.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Humanizer.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.OpenApi.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Mono.TextTemplating.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Scrutor.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\System.CodeDom.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\System.Drawing.Common.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\System.Memory.Data.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\System.Runtime.Caching.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\System.Security.Permissions.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\System.Windows.Extensions.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\MovieCharacter\MovieCharacter\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\MovieCharacter.csproj.AssemblyReference.cache
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\MovieCharacter.GeneratedMSBuildEditorConfig.editorconfig
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\MovieCharacter.AssemblyInfoInputs.cache
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\MovieCharacter.AssemblyInfo.cs
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\MovieCharacter.csproj.CoreCompileInputs.cache
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\MovieCharacter.MvcApplicationPartsAssemblyInfo.cs
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\MovieCharacter.MvcApplicationPartsAssemblyInfo.cache
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\staticwebassets\msbuild.MovieCharacter.Microsoft.AspNetCore.StaticWebAssets.props
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\staticwebassets\msbuild.build.MovieCharacter.props
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MovieCharacter.props
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MovieCharacter.props
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\staticwebassets.pack.json
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\staticwebassets.build.json
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\staticwebassets.development.json
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\scopedcss\bundle\MovieCharacter.styles.css
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\MovieCharacter.csproj.CopyComplete
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\MovieCharacter.dll
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\refint\MovieCharacter.dll
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\MovieCharacter.pdb
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\MovieCharacter.genruntimeconfig.cache
+E:\MovieCharacter\MovieCharacter\obj\Debug\net7.0\ref\MovieCharacter.dll

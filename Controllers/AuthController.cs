@@ -10,6 +10,7 @@ namespace MovieCharacter.Controllers;
 
 
 public class AuthController: ControllerBase{
+
     private readonly IAuthRepository _authrepository;
 
     public AuthController(IAuthRepository authRepository)
@@ -26,25 +27,21 @@ public class AuthController: ControllerBase{
             new User{Username = request.Username},
             request.Password
         );
-        //if(!response.Success)
-        //{
-        //    return BadRequest(response);
-        //}
-        return Ok(response);
-
-        
+        if(!response.Status){
+            return BadRequest(response);
+        }
+        return Ok(response);   
     }
+    
     // login
     [HttpPost]
     [Route("~/api/user/login")]
     public async Task<ActionResult<ServiceResponse<int>>> Login(UserLoginDto request){
         var response = await _authrepository.Login(request.Username, request.Password);
-        if(!response.Success)
-        {
+        if(!response.Status){
             return BadRequest(response);
         }
         return Ok(response);
-
         
     }
 
