@@ -4098,19 +4098,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\somai\\.nuget\\packages\\": {}
+    "C:\\Users\\Jannat\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\MovieCharacter\\MovieCharacter\\MovieCharacter.csproj",
+      "projectUniqueName": "C:\\PROJECTS\\Jannat_Personal\\MovieCharacter\\MovieCharacter.csproj",
       "projectName": "MovieCharacter",
-      "projectPath": "E:\\MovieCharacter\\MovieCharacter\\MovieCharacter.csproj",
-      "packagesPath": "C:\\Users\\somai\\.nuget\\packages\\",
-      "outputPath": "E:\\MovieCharacter\\MovieCharacter\\obj\\",
+      "projectPath": "C:\\PROJECTS\\Jannat_Personal\\MovieCharacter\\MovieCharacter.csproj",
+      "packagesPath": "C:\\Users\\Jannat\\.nuget\\packages\\",
+      "outputPath": "C:\\PROJECTS\\Jannat_Personal\\MovieCharacter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\somai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jannat\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4118,6 +4118,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.307\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4196,7 +4197,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.307\\RuntimeIdentifierGraph.json"
       }
     }
   }
