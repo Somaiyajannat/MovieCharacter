@@ -36,6 +36,7 @@ public class AuthRepository : IAuthRepository
        
     }
 
+   
     public async Task<ServiceResponse<int>> Register(User user, string password)
     {
         var response = new ServiceResponse<int>();

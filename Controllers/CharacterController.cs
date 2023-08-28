@@ -43,7 +43,7 @@ namespace MovieCharacter.Controllers;
         [HttpPost]
         [Route("~/api/addCharacter")]
 
-        public async Task<ActionResult<ServiceResponse<List<Character>>>> AddCharacter(CharacterDto newCharacter) {
+        public async Task<ActionResult<ServiceResponse<List<CharacterDto>>>> AddCharacter(CharacterDto newCharacter) {
             
             return Ok(await _charcaterService.addCharacter(newCharacter));
         }

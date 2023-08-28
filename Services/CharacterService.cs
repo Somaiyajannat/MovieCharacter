@@ -16,6 +16,7 @@ namespace MovieCharacter.Service;
         private readonly IMapper _mapper;
         private readonly DataContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
+
         public CharacterService(IMapper mapper, DataContext context,IHttpContextAccessor httpContextAccessor){
             _mapper = mapper;
             _context = context;
@@ -38,7 +39,7 @@ namespace MovieCharacter.Service;
         // get all character
         public async Task<ServiceResponse<List<CharacterDto>>> getCharacter(){
             var serviceResponse = new ServiceResponse<List<CharacterDto>> ();
-            var dbCharacters = await _context.Characters.ToListAsync();
+            var dbCharacters = await _context.Characters.Where(c => c.User!.Id == GetUserID()).ToListAsync();
             var data =  dbCharacters.Select(c => _mapper.Map<CharacterDto>(c)).ToList();
             serviceResponse.Data = data;
             return serviceResponse;
@@ -51,6 +52,7 @@ namespace MovieCharacter.Service;
             var serviceResponse = new ServiceResponse<List<CharacterDto>>();
             var character = _mapper.Map<Character>(NewCharacter);
              character.User = await _context.Users.FirstOrDefaultAsync(u => u.Id == GetUserID());
+
             _context.Characters.Add(character);
             await _context.SaveChangesAsync();
             serviceResponse.Data = await _context.Characters
