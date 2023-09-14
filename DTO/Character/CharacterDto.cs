@@ -1,7 +1,7 @@
 
 using System;
 
-namespace MovieCharacter.Dto{
+namespace MovieCharacter.DTO.Character;
     public class CharacterDto{
         public int Id {get;set;}
         public string Name { get; set; } = "Frodo";
@@ -11,4 +11,3 @@ namespace MovieCharacter.Dto{
         public int Intelligence { get; set; } = 100;
         public RpgClass Category { get; set; } = new RpgClass();
     }
-}

@@ -1,4 +1,5 @@
 global using MovieCharacter.Models;
+global using MovieCharacter.DTO;
 using System.Reflection;
 using MovieCharacter.Data;
 using MovieCharacter.Service;
@@ -9,6 +10,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Filters;
 using Microsoft.OpenApi.Models;
+using MovieCharacter.Services.Weapon;
+using AutoMapper;
+using Microsoft.EntityFrameworkCore.Storage;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,6 +48,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             };
         });
 builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<IWeaponService, WeaponService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

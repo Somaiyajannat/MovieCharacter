@@ -12,8 +12,8 @@ using MovieCharacter.Data;
 namespace MovieCharacter.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230817101503_initialMigration")]
-    partial class initialMigration
+    [Migration("20230913105810_mig")]
+    partial class mig
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -79,7 +79,6 @@ namespace MovieCharacter.Migrations
                         .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Username")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -90,10 +89,15 @@ namespace MovieCharacter.Migrations
             modelBuilder.Entity("MovieCharacter.Models.Character", b =>
                 {
                     b.HasOne("MovieCharacter.Models.User", "User")
-                        .WithMany()
+                        .WithMany("Characters")
                         .HasForeignKey("UserId");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("MovieCharacter.Models.User", b =>
+                {
+                    b.Navigation("Characters");
                 });
 #pragma warning restore 612, 618
         }

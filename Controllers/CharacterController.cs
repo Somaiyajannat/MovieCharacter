@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MovieCharacter.Service;
 using MovieCharacter.Services;
+using MovieCharacter.DTO;
 namespace MovieCharacter.Controllers;
 
     [Authorize]
@@ -28,6 +29,7 @@ namespace MovieCharacter.Controllers;
         public async  Task<ActionResult<ServiceResponse<List<CharacterDto>>>>  GetCharacter(){
             return Ok(await _charcaterService.getCharacter());
         }
+
         // get single
 
         [HttpGet]
@@ -43,16 +45,18 @@ namespace MovieCharacter.Controllers;
         [HttpPost]
         [Route("~/api/addCharacter")]
 
-        public async Task<ActionResult<ServiceResponse<List<CharacterDto>>>> AddCharacter(CharacterDto newCharacter) {
+        public async Task<ActionResult<ServiceResponse<List<CharacterDto>>>> AddCharacter(AddCharacterDto newCharacter) {
             
             return Ok(await _charcaterService.addCharacter(newCharacter));
         }
+
+
         // update a character
 
         [HttpPut]
         [Route("~/api/updateCharacter")]
 
-        public async Task<ActionResult<CharacterDto>> updateCharacter(CharacterDto newCharacter) {
+        public async Task<ActionResult<ServiceResponse<CharacterDto>>> updateCharacter(UpdateCharacterDto newCharacter) {
             var response = await _charcaterService.UpdateCharacter(newCharacter);
              if (response.Data is null)
             {
@@ -65,7 +69,7 @@ namespace MovieCharacter.Controllers;
         [HttpDelete]
         [Route("~/api/deleteCharacter")]
 
-        public async Task<ActionResult<List<CharacterDto>>> DeleteCharacter(int id){
+        public async Task<ActionResult<ServiceResponse<List<CharacterDto>>>> DeleteCharacter(int id){
             var response = await _charcaterService.DeleteCharacter(id);
             if(response.Data is null){
                 return NotFound(response);

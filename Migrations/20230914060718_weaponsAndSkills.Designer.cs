@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MovieCharacter.Data;
 
@@ -11,9 +12,11 @@ using MovieCharacter.Data;
 namespace MovieCharacter.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230914060718_weaponsAndSkills")]
+    partial class weaponsAndSkills
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -118,7 +121,7 @@ namespace MovieCharacter.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("MovieCharacter.Models.Weapons", b =>
+            modelBuilder.Entity("MovieCharacter.Models.Weapon", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -168,11 +171,11 @@ namespace MovieCharacter.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("MovieCharacter.Models.Weapons", b =>
+            modelBuilder.Entity("MovieCharacter.Models.Weapon", b =>
                 {
                     b.HasOne("MovieCharacter.Models.Character", "Character")
                         .WithOne("Weapon")
-                        .HasForeignKey("MovieCharacter.Models.Weapons", "CharacterId")
+                        .HasForeignKey("MovieCharacter.Models.Weapon", "CharacterId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

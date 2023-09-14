@@ -12,6 +12,10 @@ namespace MovieCharacter.Models{
         public int Intelligence { get; set; } = 100;
         public RpgClass Category { get; set; } = RpgClass.Knight;
         public User? User{get;set;}
+        public Weapons? Weapon{get;set;}
+
+        public List<Skill>? Skills{get;set;}
+
     }
 
 }

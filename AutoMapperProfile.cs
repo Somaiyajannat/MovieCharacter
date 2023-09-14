@@ -1,6 +1,7 @@
 using AutoMapper;
-using MovieCharacter.Dto;
+using MovieCharacter.DTO;
 using MovieCharacter.Models;
+using MovieCharacter.DTO.Weapon;
 namespace MovieCharacter;
 
 public class AutoMapperProfile : Profile {
@@ -8,6 +9,10 @@ public class AutoMapperProfile : Profile {
 
         CreateMap<Character, CharacterDto>();
         CreateMap<CharacterDto, Character>();
+        CreateMap<AddCharacterDto, Character>();
+        CreateMap<UpdateCharacterDto, Character>();
+        CreateMap<Weapons, GetWeaponDto>();
+        CreateMap<Weapons, AddWeaponDto>();
     }
 
 }
