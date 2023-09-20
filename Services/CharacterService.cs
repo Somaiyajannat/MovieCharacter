@@ -124,6 +124,7 @@ namespace MovieCharacter.Service;
 
         }
 
+// character skills
     public async Task<ServiceResponse<CharacterDto>> AddCharacterSkill(AddCharacterSkillDto newCharacterSkill)
     {
         var serviceResponse = new ServiceResponse<CharacterDto>();
