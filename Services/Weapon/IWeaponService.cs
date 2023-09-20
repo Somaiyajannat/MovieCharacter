@@ -5,5 +5,5 @@ namespace MovieCharacter.Services.Weapon;
 
 public interface IWeaponService
 {
-    Task<ServiceResponse<CharacterDto>> AddWeapon(AddWeaponDto newWeapon);
+    Task<ServiceResponse<Character>> AddWeapon(AddWeaponDto newWeapon);
 }

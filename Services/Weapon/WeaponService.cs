@@ -16,11 +16,7 @@ public class WeaponService : IWeaponService
     private readonly DataContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IMapper _mapper;
-    // public Task<ServiceResponse<CharacterDto>> AddWeapon(AddWeaponDto newWeapon)
-    // {
-
-    //     throw new NotImplementedException();
-    // }
+ 
 
     public WeaponService(DataContext context, IHttpContextAccessor httpContextAccessor, IMapper mapper)
         {
@@ -61,4 +57,9 @@ public class WeaponService : IWeaponService
             }
             return response;
         }
+
+    Task<ServiceResponse<Character>> IWeaponService.AddWeapon(AddWeaponDto newWeapon)
+    {
+        throw new NotImplementedException();
+    }
 }

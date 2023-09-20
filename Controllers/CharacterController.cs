@@ -77,4 +77,10 @@ namespace MovieCharacter.Controllers;
             return Ok(response);
         }
 
+        [HttpPost("Skills")]
+        public async Task<ActionResult<ServiceResponse<CharacterDto>>> AddCharacterSkill(AddCharacterSkillDto addCharcaterSkillDto){
+            
+            return Ok(await _charcaterService.AddCharacterSkill(addCharcaterSkillDto));
+        }
+
     }
